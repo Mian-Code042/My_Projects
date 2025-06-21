@@ -108,7 +108,3 @@ This project is licensed under the MIT License – feel free to use it for learn
 Made with ❤️ by Mian-Code042
 
 
-### ✅ Next Steps:
-1. Replace your current `README.md` file with this.
-2. Add screenshots for each project (optional but highly recommended).
-3. Consider adding short GIFs or demo videos for the Snake Game or Trading System.
