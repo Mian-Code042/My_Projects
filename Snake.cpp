@@ -156,15 +156,21 @@ int main() {
     cout << "Press 's' to Start Game! ";
     cin >> start;
 
-    if (start == 's' || start == 'S') {
-        setup();
-        while (!gameOver) {
-            draw();
-            input();
-            logic();
-            Sleep(100); // delay
-        }
+   if (start == 's' || start == 'S') {
+    setup();
+    while (!gameOver) {
+        draw();
+        input();
+        logic();
+
+        // Dynamic speed: snake moves faster with more fruit eaten
+        
+        int speed = 100 - (tail_len * 2);  // reduce delay as tail increases
+        if (speed < 30) speed = 30;       // don't go below 30ms delay
+        Sleep(speed);
     }
+}
+
 
     cout << "\n\t\tGame Over! Final Score: " << score << endl;
     system("pause");
